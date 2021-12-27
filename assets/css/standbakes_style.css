@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:ital@1&family=Oswald:wght@400;700&family=Roboto:wght@300&display=swap');
 
+/* As modificações abaixo são do tipo generalistas, podem ser aplicadas em várias ocasiões  */
+
 *{
   padding: 0;
   margin: 0;
@@ -12,6 +14,39 @@ body{
   background-color: #ffffff;
 }
 
+/* Classe padrão do tipo container para definirmos o limite de largura dos textos, títulos, e qualquer outro tipo de tag  */
+
+.container{
+  width: 1140px;
+  margin: auto;
+}
+
+/* alterando as propriedades do título h1, como fonte, tipografia, margem e entre outros */
+
+h1{
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  font-size: 90px;
+  line-height: 95px;
+  margin-bottom: 20px;
+}
+
+h2{
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  font-size: 35px;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+
+
+.bar{
+  background-color: #117015;
+  height: 22px;
+  width: 168px;
+}
+
+
 
 /* Código referente ao header a partir daqui */
 
@@ -20,13 +55,6 @@ body{
 header .line{
   background-color: #117015;
   height: 10px;
-}
-
-/* Classe padrão do tipo container para definirmos o limite de largura dos textos, títulos, e qualquer outro tipo de tag  */
-
-.container{
-  width: 1140px;
-  margin: auto;
 }
 
 /* .header_limit é a classe que define como os elementos irão se comportar no header */
@@ -145,17 +173,7 @@ header{
   background-position: center;
   background-size: cover;
   padding-top: 90px;
-  padding-bottom: 90px;
-}
-
-/* alterando as propriedades do título h1, como fonte, tipografia, margem e entre outros */
-
-.banner h1{
-  font-weight: bold;
-  font-family: 'Oswald', sans-serif;
-  font-size: 90px;
-  line-height: 95px;
-  margin-bottom: 20px;
+  padding-bottom: 150px;
 }
 
 .banner span{
@@ -178,3 +196,37 @@ header{
   margin-right: 40px;
 }
 
+
+/* Area principal */
+
+.area1{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.area--content{
+  padding: 50px;
+}
+
+.content-quote{
+  margin-bottom: 20px;
+  font-family: "Oswald", sans-serif;
+}
+
+
+.area--img1{
+  background-image: url("../images/f1.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+
+.area--img2{
+  background-image: url("../images/f2.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  height: 347px;
+}
