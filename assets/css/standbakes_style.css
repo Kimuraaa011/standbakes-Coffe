@@ -12,17 +12,24 @@ body{
   background-color: #ffffff;
 }
 
+
+/* Código referente ao header a partir daqui */
+
+/* Código da linha estética do site no header */
+
 header .line{
   background-color: #117015;
   height: 10px;
 }
+
+/* Classe padrão do tipo container para definirmos o limite de largura dos textos, títulos, e qualquer outro tipo de tag  */
 
 .container{
   width: 1140px;
   margin: auto;
 }
 
-
+/* .header_limit é a classe que define como os elementos irão se comportar no header */
 
 .header_limit{
   display: flex;
@@ -32,10 +39,15 @@ header .line{
   padding-top: 10px;
 }
 
+/* alterando o tamanho da logo */
+
 .logo img{
   height: 64px;
   width: 64px;
 }
+
+/* .header_right define como os elementos a direita do header irão se comportar
+. Elementos como o searchbox, lupa e o menu  */
 
 .header_right{
   display: flex;
@@ -47,9 +59,13 @@ header .line{
   margin: 0 10px 0 0;
 }
 
+/* Definindo que os elementos da tag form irão ser direcionados em linha e não no formato coluna */
+
 .header_right .searchBox form{
   display: flex;
 }
+
+/* Realiza alterações de como o input irá ser visualizado, como tamanho do placeholder, padding, borda e entre outros definidos abaixo  */
 
 .header_right .searchBox input{
   font-size: 16px;
@@ -61,6 +77,8 @@ header .line{
   padding-right: 40px;
 }
 
+/* Todo o código abaixo referente a button são definições de como nosso botão que tem um formato de uma lupa irá ser exibido. Como tamanho, se terá borda, o que acontecerá se o mouse estiver sobre o botão e ntre outras funcionalidades */
+
 .header_right .searchBox button{
   background: transparent;
   padding: 7px 10px;
@@ -70,15 +88,14 @@ header .line{
 }
 .header_right .searchBox button:hover{
   outline: 1px solid #000000;
-  
 }
-
-
 
 .header_right .searchBox button img{
   width: 16px;
   height: 16px;
 }
+
+/* Aqui iremos utilizar formatações css para desenhar três bordas paralelas utilizando flexbox para definir elementos em formato de coluna(column) */
 
 .menu{
   display: flex;
@@ -87,6 +104,8 @@ header .line{
   margin-left: 20px;
   cursor: pointer;
 }
+
+/* Foi o utilizado o seletor nth para selecionar cada elemento da div e definí-las com as formatações certas, mas seria possível utilizar uma única classe a aplicar a cada uma dessas div's. O nth foi optado por questões didáticas e de aprendizado. Ou poderia ser usado uma imagem no lugar das formatações  */
 
 .menu div:nth-child(1){
   border: 1px solid black;
@@ -115,6 +134,12 @@ header{
   margin-bottom: 40px;
 }
 
+/* Todo código a partir daqui é referente ao banner */
+
+
+
+/* na classe banner iremos definir o background do tipo imagem e suas propriedades */
+
 .banner{
   background-image: url("../images/bg.jpg");
   background-position: center;
@@ -122,6 +147,8 @@ header{
   padding-top: 90px;
   padding-bottom: 90px;
 }
+
+/* alterando as propriedades do título h1, como fonte, tipografia, margem e entre outros */
 
 .banner h1{
   font-weight: bold;
@@ -135,14 +162,19 @@ header{
   margin-left: 5px;
 }
 
+/* criando um espaço entre o texto secundário e as 3 imagens(no caso o container que abriga essas três imagens) */
+
 .banner-images{
   margin-top: 60px;
 }
 
+/* alterando as características e propriedades de cada imagem de forma individual */
+
 .banner-images img{
   width: 148px;
   height: 148px;
-  border: 6px solid #117050;
+  border: 6px solid #117015;
   border-radius: 50%;
   margin-right: 40px;
 }
+
