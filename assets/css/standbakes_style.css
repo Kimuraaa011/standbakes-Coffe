@@ -91,6 +91,7 @@ header .line{
 
 .header_right .searchBox form{
   display: flex;
+  position: relative;
 }
 
 /* Realiza alterações de como o input irá ser visualizado, como tamanho do placeholder, padding, borda e entre outros definidos abaixo  */
@@ -98,30 +99,42 @@ header .line{
 .header_right .searchBox input{
   font-size: 16px;
   padding: 10px 13px;
-  border: 1px solid #999999;
+  height: 40px;
+  width: 40px;
   outline: 0;
-  width: 100%;
-  max-width: 220px;
+  transition: width 0.3s ease;
+}
+
+.header_right .searchBox.active input{
+  width: 200px;
   padding-right: 40px;
 }
+
 
 /* Todo o código abaixo referente a button são definições de como nosso botão que tem um formato de uma lupa irá ser exibido. Como tamanho, se terá borda, o que acontecerá se o mouse estiver sobre o botão e ntre outras funcionalidades */
 
 .header_right .searchBox button{
-  background: transparent;
-  padding: 7px 10px;
+  height: 40px;
+  width: 40px;
+  position: absolute;
   border: 0;
-  margin-left: -37px;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
-.header_right .searchBox button:hover{
-  outline: 1px solid #000000;
+
+/* A classe active abaixo serve para ativar o mecanismo de busca oculta quando se clica no botão. O mesmo é feito acima com o input */
+
+.header_right .searchBox.active button{
+  transform: translateX(159px);
+  background: transparent;
+  outline: none;
 }
 
 .header_right .searchBox button img{
   width: 16px;
   height: 16px;
 }
+
 
 /* Aqui iremos utilizar formatações css para desenhar três bordas paralelas utilizando flexbox para definir elementos em formato de coluna(column) */
 
