@@ -46,6 +46,29 @@ h2{
   width: 168px;
 }
 
+.scrollButton{
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  right: 0;
+
+}
+
+.scrollButton:before{
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 0; 
+  height: 0; 
+
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid #117015;
+  cursor: pointer;
+  
+}
+
 
 
 /* Código referente ao header a partir daqui */
@@ -55,6 +78,11 @@ h2{
 header .line{
   background-color: #117015;
   height: 10px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 /* .header_limit é a classe que define como os elementos irão se comportar no header */
@@ -173,6 +201,47 @@ header .line{
 
 header{
   margin-bottom: 40px;
+}
+
+.menu-area{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.menu-content{
+  width: 0;
+  height: 100vh;
+  background-color: #ccc;
+  font-family: "Oswald", sans-serif;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 0 0 5px;
+  overflow: hidden;
+  transition: all ease 0.5s;
+}
+
+.menu-content.active{
+  width: 200px;
+}
+
+.menu-content span{
+  display: flex;
+  justify-content: flex-end;
+  width: 185px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+
+.menu-content ul, .menu-content li{
+  list-style: none;
+}
+
+.menu-content li{
+  margin-bottom: 10px;
+
 }
 
 /* Todo código a partir daqui é referente ao banner */

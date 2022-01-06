@@ -22,7 +22,7 @@
               </button>
             </form>
           </div>
-          <div class="menu">
+          <div class="menu"  onclick="ativarMenu()">
             <div></div>
             <div></div>
             <div></div>
@@ -30,6 +30,18 @@
         </div>
       </div>
     </header>
+
+    <aside class="menu-area">
+      <div class="menu-content"">
+        <span onclick="desativarMenu()">back</span>
+        <ul>
+          <li>Capuccino</li>
+          <li>Expresso</li>
+          <li>Frapuccino</li>
+          <li>Chocolouco</li>
+        </ul>
+      </div>
+    </aside>
 
     <section class="banner">
       <div class="container">
@@ -61,6 +73,7 @@
         
       </div>
     </section>
+    <div class="scrollButton" onclick="scrollUp()"></div>
     <script type="text/javascript" src="script.js"></script>
   </body>
 
